@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <h1 class="logo">Data Science Course</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="dashboard-link">Home</a></li>
+                <!-- You can add more dashboard-specific navigation here if needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="youtube-player-placeholder-sidebar">
+                <!-- Placeholder for potential sidebar-specific video previews, or simply removed if not needed -->
+            </div>
+            
+            <section id="dashboard-content" class="course-outline-section">
+                <img src="thumbnail1.png" alt="Data Science Course Thumbnail" class="sidebar-course-thumbnail">
+
+                <div class="user-progress">
+                    <p>Current XP: <span id="current-xp-display">0</span></p>
+                    <p>Rank: <span id="current-rank-display">Novice</span></p>
+                </div>
+
+                <div class="course-phases-list">
+                    <div class="course-phase" data-phase-id="phase1">
+                        <h3 class="lecture-title-link">Phase 1: Python (Week 1-4)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase1">Assignment - 1</button>
+
+                    <div class="course-phase" data-phase-id="phase2">
+                        <h3 class="lecture-title-link">Phase 2: Maths (Week 5-8)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase2">Assignment - 2</button>
+
+                    <div class="course-phase" data-phase-id="phase3">
+                        <h3 class="lecture-title-link">Phase 3: Data Preprocessing & Visualization (Week 9-11)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase3">Assignment - 3</button>
+
+                    <div class="course-phase" data-phase-id="phase4">
+                        <h3 class="lecture-title-link">Phase 4: SQL (Week 12-14)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase4">Assignment - 4</button>
+
+                    <div class="course-phase" data-phase-id="phase5">
+                        <h3 class="lecture-title-link">Phase 5: Machine Learning (Week 15-21)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase5">Assignment - 5</button>
+
+                    <div class="course-phase" data-phase-id="phase6">
+                        <h3 class="lecture-title-link">Phase 6: Deep Learning (Week 22-25)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase6">Assignment - 6</button>
+
+                    <div class="course-phase" data-phase-id="phase7">
+                        <h3 class="lecture-title-link">Phase 7: Specialization (Weeks 25-26)</h3>
+                    </div>
+                    <button class="assignment-button" data-phase-id="phase7">Specialization Details</button>
+                </div>
+
+            </section>
+        </aside>
+        <section class="main-content">
+            <div id="dynamic-content-area">
+                <p class="main-text-description-top">there will be some text description of each phase will tell u later</p>
+                <div class="main-video-player-container">
+                    <iframe id="lecture-player" width="100%" height="500" src="about:blank" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="main-text-description-bottom">there will be some text description of each phase will tell u later</p>
+            </div>
+            <div class="main-content-placeholder">
+                <h2>Read Before You Start!</h2>
+                <p>Select a lecture or assignment from the sidebar to begin!</p>
+                <p>Earn Experience Points (XP) by completing projects within each phase. When all projects in a phase are marked as complete, you will earn XP and your rank will update!</p>
+                <p>Your rank will increase as you gain more XP. If you uncheck a project from a previously completed phase, your XP will be deducted, and your rank may revert.</p>
+                <p>Keep an eye on your XP and rank displayed in the sidebar!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Somesh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="completion-popup-overlay" class="hidden">
+        <div id="completion-popup-content">
+            <h3>Phase Completed!</h3>
+            <p>You earned <span id="popup-xp-display">0</span> XP!</p>
+            <p>Your new rank is: <span id="popup-rank-display">Novice</span></p>
+            <button id="popup-close-button">Awesome!</button>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,1003 @@
+/* Universal box-sizing for consistent layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0; /* Ensure no default padding */
+    font-family: 'Roboto Mono', monospace; /* Default body font */
+    background-color: #0c0c0c;
+    color: #888888; /* Adjusted Secondary Text (Grey) for better visibility */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0c0c0c; /* Changed to match body background */
+    backdrop-filter: none; /* Ensure no blur */
+    -webkit-backdrop-filter: none; /* Ensure no blur for Safari */
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Re-added box-shadow */
+    border-bottom: 2px solid #27ba94;
+    z-index: 1000;
+    animation: none;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem; /* Adjusted font size */
+    color: #27ba94;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+.fixed-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.fixed-header nav ul li {
+    margin-left: 0.8rem; /* Adjusted margin to reduce spacing */
+}
+
+.fixed-header nav ul li a {
+    color: #888888; /* Adjusted Secondary Text (Grey) for better visibility */
+    text-decoration: none;
+    font-size: 0.9rem; /* Adjusted font size */
+    transition: color 0.3s ease;
+}
+
+.fixed-header nav ul li a:hover {
+    color: #27ba94;
+}
+
+.fixed-header nav ul li .dashboard-link {
+    background-color: #27ba94;
+    color: #0c0c0c; /* Dark text for green background */
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px; /* Rounded corners */
+    font-weight: normal; /* Adjusted to normal */
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align text */
+    background-color: #0c0c0c;
+    color: #888888; /* Changed to greyish shade */
+    padding-left: 0; /* Removed indentation */
+}
+
+.hero-message {
+    font-size: 1.8rem; /* Slightly increased font size */
+    border-right: .15em solid rgba(0,0,0,0);
+    white-space: pre;
+    margin: 0;
+    letter-spacing: normal;
+    animation: none;
+}
+
+.hero-message code {
+    display: block;
+    white-space: pre-wrap; /* Allow wrapping within the code block */
+}
+
+.call-to-action {
+    background-color: #0c0c0c;
+    color: #27ba94;
+    padding: 1rem 0;
+    text-align: center; /* Center text */
+    font-size: 1.1rem;
+    border-top: 2px solid #27ba94;
+    border-bottom: 2px solid #27ba94;
+    margin: 2rem 0;
+    overflow: visible; /* Allow content to be visible */
+    white-space: normal; /* Allow text to wrap */
+    position: static; /* Remove relative positioning */
+}
+
+.scrolling-text-container {
+    /* Removed display: flex; and animation */
+    width: auto; /* Allow content to dictate width */
+    transform-style: none;
+    backface-visibility: none;
+    min-width: auto;
+}
+
+.scrolling-text {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: normal; /* Adjusted to normal */
+    display: block; /* Make it a block element for centering */
+    padding-right: 0; /* Remove padding */
+    color: #27ba94;
+    font-size: 1.1rem;
+}
+
+@keyframes scrollText {
+    /* Removed keyframes */
+}
+
+.roadmap-step {
+    background-color: transparent;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.video-step {
+    text-align: center;
+    padding: 2rem;
+}
+
+.roadmap-description {
+    color: #888888; /* Adjusted Secondary Text (Grey) for better visibility */
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.game-step {
+    text-align: center;
+}
+
+.join-course-text {
+    color: #27ba94;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.game-ad-image img {
+    max-width: 40%; /* Adjusted max-width to make image even smaller */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+
+.video-placeholder iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.game-ad {
+    background-color: #0c0c0c; /* Updated Dark background */
+    border: 2px solid #27ba94; /* Updated Main Text (Green) */
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.progress-bar-container {
+    width: 80%;
+    background-color: #333333; /* Darker grey for progress bar background */
+    border-radius: 5px;
+    margin: 1rem auto;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #27ba94; /* Updated Main Text (Green) */
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+.start-button {
+    background-color: #27ba94;
+    color: #0c0c0c; /* Dark text for green background */
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #1f9c7a;
+}
+
+footer {
+    background-color: #1a1a1a; /* Slightly lighter dark background for footer */
+    color: #888888; /* Adjusted Secondary Text (Grey) for better visibility */
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Typing animation for hero message */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #888888; } /* Adjusted Secondary Text (Grey) for better visibility */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section#about h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94; /* Green color for About Me heading */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center align */
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+section#about p {
+    font-family: 'Press Start 2P', cursive; /* Apply Press Start 2P font */
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.6; /* Slightly increased line height for readability */
+    font-size: 1.05rem; /* Increased text size */
+    max-width: 800px; /* Optional: Constrain width for readability */
+    margin-left: auto; /* Center paragraphs within the section */
+    margin-right: auto;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+section#about h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94; /* Green color for Why I Created This Website heading */
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    max-width: 800px; /* Optional: Constrain width for readability */
+    margin-left: auto; /* Center h3 within the section */
+    margin-right: auto;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+.hero-message pre code {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: normal; /* Adjusted to normal */
+    color: #888888; /* Set default color to grey */
+}
+
+.print-command {
+    color: #888888; /* Grey color for 'print' */
+}
+
+.print-quote {
+    color: #27ba94; /* Green color for quoted text */
+}
+
+.call-to-action p {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: normal; /* Ensure not too bold */
+}
+
+/* Styling for Donate Me page */
+#donate-section .donate-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+#donate-section .donate-content p {
+    font-family: 'Press Start 2P', cursive;
+    color: #888888;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+#donate-section .qr-code-placeholder img {
+    max-width: 600px;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+}
+
+.donate-title-scroller-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-top: 2px solid #27ba94;
+    border-bottom: 2px solid #27ba94;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.donate-title-scroller {
+    display: flex;
+    animation: scrollDonateTitle 6s linear infinite; /* Animation for scrolling title */
+    width: fit-content;
+    min-width: 300%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.donate-title-scroller h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94;
+    font-size: 1.5rem;
+    margin: 0 2rem 0 0;
+    flex-shrink: 0;
+    width: auto;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+@keyframes scrollDonateTitle {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-33.3333%); }
+}
+
+.about-header-wrapper.call-to-action {
+    /* Inherits border and centering from .call-to-action */
+    text-align: center; /* Ensure content inside is centered */
+    margin-bottom: 2rem; /* Add space below the heading wrapper */
+}
+
+.about-header-wrapper.call-to-action h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94;
+    font-size: 1.5rem;
+    margin: 0; /* Remove default margin for h2 within wrapper */
+    padding: 1rem 0;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+section#about {
+    padding: 4rem 2rem; /* Add overall padding to the section */
+    max-width: 960px; /* Constrain width for better readability */
+    margin: 0 auto; /* Center the section content */
+}
+
+section#about p {
+    font-family: 'Press Start 2P', cursive;
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    max-width: 800px; /* Optional: Constrain width for readability */
+    margin-left: auto; /* Center paragraphs within the section */
+    margin-right: auto;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+section#about h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94; /* Green color for Why I Created This Website heading */
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    max-width: 800px; /* Optional: Constrain width for readability */
+    margin-left: auto; /* Center h3 within the section */
+    margin-right: auto;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+.dashboard-layout {
+    display: flex;
+    padding-top: 0; /* Ensures main content starts right after the header if not fixed */
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #0c0c0c; /* Changed to match body background */
+    padding: 0 15px 15px 15px; /* Adjusted padding to remove top padding */
+    border-right: 2px solid #27ba94;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 60px; /* Start below the fixed header */
+    height: calc(100vh - 60px); /* Adjust height based on header */
+    overflow-y: auto; /* Re-enable scrollability */
+    z-index: 100; /* Ensure sidebar is on top */
+}
+
+.main-content {
+    margin-left: 300px; /* Offset for the fixed sidebar */
+    flex-grow: 1; /* Allows it to take up remaining space */
+    padding: 2rem;
+    padding-top: calc(60px + 2rem); /* Adjust for fixed header and padding */
+}
+
+.youtube-player-placeholder {
+    margin-bottom: 0; /* Removed margin to eliminate space */
+}
+
+.sidebar-features h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.sidebar-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-features li {
+    color: #888888;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 10px;
+}
+
+/* Re-styling for course outline within sidebar */
+.course-outline-section {
+    padding: 0; /* Ensure no padding at the top */
+    max-width: none;
+    margin: 0;
+    text-align: left;
+}
+
+.course-outline-title {
+    font-size: 1.1rem; /* Adjusted for sidebar, smaller */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sidebar-course-thumbnail {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.user-progress {
+    background-color: #1a1a1a;
+    border: 1px solid #27ba94;
+    border-radius: 6px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.user-progress p {
+    font-family: 'Roboto Mono', monospace;
+    color: #888888;
+    font-size: 0.9rem;
+    margin: 0.3rem 0; /* Smaller margin for lines */
+}
+
+.user-progress p span {
+    color: #27ba94; /* Highlight dynamic values with green */
+    font-weight: bold;
+}
+
+.course-phases-list {
+    margin-bottom: 0; /* No extra space at the bottom of the list itself */
+}
+
+/* Sidebar Course Phase Element Styling */
+.course-phase {
+    background-color: #1a1a1a;
+    border: 1px solid #27ba94;
+    border-radius: 6px;
+    padding: 0.6rem;
+    margin-bottom: 0.3rem; /* Reduced margin to bring it closer to the assignment button */
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.course-phase:hover {
+    background-color: #272727;
+}
+
+.lecture-title-link {
+    font-family: 'Roboto Mono', monospace;
+    color: #888888;
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0; /* Remove bottom margin here, spacing will be handled by .course-phase and .assignment-button */
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.lecture-title-link:hover {
+    color: #27ba94;
+}
+
+/* Removed .assignments-list styles */
+
+.assignment-button {
+    background-color: #1a1a1a;
+    color: #888888;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid #27ba94;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    margin-top: 0.2rem; /* Reduced margin to bring it closer to the phase title */
+    margin-bottom: 0.8rem; /* Space after the assignment button before the next phase */
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.assignment-button:hover {
+    background-color: #27ba94;
+    color: #0c0c0c;
+    border-color: #27ba94;
+}
+
+/* Styling for main content area */
+#dynamic-content-area {
+    padding: 2rem;
+    background-color: #0c0c0c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+}
+
+.assignment-pdf-section,
+.project-list-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #1a1a1a; /* Slightly lighter dark background */
+    border-radius: 8px;
+    border: 1px solid #27ba94;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.assignment-pdf-section h4,
+.project-list-section h4 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+.pdf-download-button {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+    background-color: #27ba94;
+    color: #0c0c0c;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-download-button:hover {
+    background-color: #1f9c7a;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.todo-list input[type="checkbox"] {
+    margin-right: 0.8rem;
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #27ba94;
+    border-radius: 3px;
+    background-color: #0c0c0c;
+    cursor: pointer; /* Changed to pointer to indicate clickability */
+    position: relative;
+}
+
+.todo-list input[type="checkbox"]:checked {
+    background-color: #27ba94;
+    border-color: #27ba94;
+}
+
+.todo-list input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Checkmark character */
+    display: block;
+    color: #0c0c0c;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-list label {
+    font-family: 'Roboto Mono', monospace;
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.main-text-description-top,
+.main-text-description-bottom {
+    font-family: 'Press Start 2P', cursive;
+    color: #888888;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.current-video-title-display {
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94; /* Green color for the video title */
+    font-size: 1.2rem; /* Larger font size for prominence */
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#dynamic-content-area h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+#dynamic-content-area p {
+    font-family: 'Roboto Mono', monospace;
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.lecture-phase-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94; /* Green color for main phase title */
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.lecture-video-block {
+    margin-bottom: 2rem;
+    border: 1px solid #27ba94; /* Border around each video block */
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #1a1a1a; /* Slightly lighter dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.video-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #888888; /* Grey color for individual video title */
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: normal; /* Ensure consistent font weight */
+}
+
+/* Further refine h4 styling within dynamic content */
+#dynamic-content-area .assignment-pdf-section h4,
+#dynamic-content-area .project-list-section h4,
+#dynamic-content-area .additional-lecture-links h4 {
+    font-family: 'Press Start 2P', cursive; /* Ensure consistent font for these headings */
+    color: #27ba94; /* Green color for sub-headings */
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-align: center; /* Center align sub-headings */
+    font-weight: normal; /* Attempt to reduce boldness */
+}
+
+#dynamic-content-area ul {
+    list-style: disc inside;
+    color: #cccccc;
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#dynamic-content-area ul li {
+    margin-bottom: 0.5rem;
+}
+
+.additional-lecture-links {
+    margin-top: 2rem;
+    border-top: 1px solid #333333;
+    padding-top: 1rem;
+}
+
+.additional-lecture-links h4 {
+    font-size: 1rem;
+    color: #27ba94;
+    margin-bottom: 0.8rem;
+}
+
+.lecture-link-small {
+    color: #888888;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.lecture-link-small:hover {
+    color: #27ba94;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.sidebar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Hide scrollbar for Firefox */
+.sidebar {
+    scrollbar-width: none;
+}
+
+.main-video-player-container iframe {
+}
+
+/* Pop-up Styling */
+.hidden {
+    display: none !important;
+}
+
+#completion-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it's on top of everything */
+}
+
+#completion-popup-content {
+    background-color: #1a1a1a;
+    border: 2px solid #27ba94;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+}
+
+#completion-popup-content h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #27ba94;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+#completion-popup-content p {
+    font-family: 'Roboto Mono', monospace;
+    color: #888888;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+#completion-popup-content span {
+    color: #27ba94; /* Highlight dynamic values */
+    font-weight: bold;
+}
+
+#popup-close-button {
+    background-color: #27ba94;
+    color: #0c0c0c;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#popup-close-button:hover {
+    background-color: #1f9c7a;
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .fixed-header nav ul li {
+        margin-left: 0.5rem;
+    }
+
+    .fixed-header nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .hero-message {
+        font-size: 1.2rem;
+    }
+
+    .call-to-action {
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+    }
+
+    .scrolling-text {
+        font-size: 0.9rem;
+    }
+
+    .game-ad-image img {
+        max-width: 60%; /* Slightly larger on smaller screens to be visible */
+    }
+
+    .video-placeholder iframe {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    /* Dashboard Layout Adjustments */
+    .dashboard-layout {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+        padding-top: 60px; /* Account for fixed header */
+    }
+
+    .sidebar {
+        position: relative; /* No longer fixed, flows with content */
+        top: 0;
+        width: 100%; /* Take full width */
+        height: auto; /* Height adjusts to content */
+        border-right: none;
+        border-bottom: 2px solid #27ba94; /* Add bottom border for separation */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 1rem; /* Adjust padding for mobile */
+        z-index: auto; /* Reset z-index */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove left margin */
+        padding: 1rem; /* Adjust padding for mobile */
+        padding-top: 1rem; /* No need for extra padding-top due to fixed header, as sidebar is now static */
+    }
+
+    .sidebar-course-thumbnail {
+        max-width: 80%; /* Adjust thumbnail size for mobile */
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .user-progress {
+        text-align: center; /* Center progress info on mobile */
+    }
+
+    .course-phase, .assignment-button {
+        padding: 0.8rem; /* Increase tappable area */
+        font-size: 0.9rem;
+    }
+
+    #dynamic-content-area h2 {
+        font-size: 1.4rem;
+    }
+
+    #dynamic-content-area p {
+        font-size: 0.9rem;
+    }
+
+    .lecture-phase-title {
+        font-size: 1.5rem;
+    }
+
+    .video-title {
+        font-size: 1rem;
+    }
+
+    .lecture-video-block {
+        padding: 1rem;
+    }
+
+    .assignment-pdf-section h4,
+    .project-list-section h4 {
+        font-size: 1rem;
+    }
+
+    .pdf-download-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .todo-list label {
+        font-size: 0.85rem;
+    }
+
+    #completion-popup-content {
+        padding: 1.5rem;
+    }
+
+    #completion-popup-content h3 {
+        font-size: 1.2rem;
+    }
+
+    #completion-popup-content p {
+        font-size: 0.9rem;
+    }
+
+    #popup-close-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    section#about {
+        padding: 2rem 1rem;
+    }
+
+    section#about p,
+    section#about h3 {
+        font-size: 0.9rem;
+        text-align: center; /* Center align text in about section for mobile */
+        max-width: 90%;
+    }
+
+    #donate-section .donate-content {
+        padding: 2rem 1rem;
+    }
+
+    #donate-section .donate-content p {
+        font-size: 0.9rem;
+    }
+
+    #donate-section .qr-code-placeholder img {
+        max-width: 80%;
+    }
+}
